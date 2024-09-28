@@ -36,4 +36,10 @@ resource "aws_cloudfront_distribution" "cdn" {
     minimum_protocol_version       = "TLSv1.2_2021"
     cloudfront_default_certificate = false
   }
+
+  custom_error_response {
+    error_code         = 404
+    response_code      = 404
+    response_page_path = "/404.html"
+  }
 }

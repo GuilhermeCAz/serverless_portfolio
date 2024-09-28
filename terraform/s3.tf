@@ -2,6 +2,14 @@ resource "aws_s3_bucket" "portfolio_site" {
   bucket = var.site_domain
 }
 
+resource "aws_s3_bucket_ownership_controls" "portfolio_site" {
+  bucket = aws_s3_bucket.portfolio_site.id
+
+  rule {
+    object_ownership = "BucketOwnerEnforced"
+  }
+}
+
 resource "aws_s3_bucket_public_access_block" "portfolio_site" {
   bucket = aws_s3_bucket.portfolio_site.id
 
@@ -19,19 +27,31 @@ resource "aws_s3_bucket_website_configuration" "portfolio_site" {
   }
 
   error_document {
-    key = "error.html"
+    key = "404.html"
   }
 }
 
 resource "aws_s3_object" "src_files" {
-  for_each = fileset("../src/", "*")
+  for_each = fileset("../out", "**/*")
 
-  bucket        = aws_s3_bucket.portfolio_site.id
-  key           = each.value
-  source        = "../src/${each.value}"
-  cache_control = "no-cache"
-  content_type  = "text/html"
-  etag          = filemd5("../src/${each.value}")
+  bucket = aws_s3_bucket.portfolio_site.id
+  key    = each.value
+  source = "../out/${each.value}"
+  content_type = lookup(
+    {
+      "html" = "text/html",
+      "css"  = "text/css",
+      "js"   = "application/javascript",
+      "jpg"  = "image/jpeg",
+      "svg"  = "image/svg+xml",
+      "pdf"  = "application/pdf",
+      "txt"  = "text/plain",
+      "ico"  = "image/x-icon",
+    },
+    split(".", each.value)[length(split(".", each.value)) - 1],
+    "application/octet-stream"
+  )
+  etag = filemd5("../out/${each.value}")
 }
 
 resource "aws_s3_bucket_policy" "portfolio_site" {
