@@ -6,7 +6,6 @@
 [![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)](https://nextjs.org/)
 [![Terraform](https://img.shields.io/badge/Terraform-844FBA?logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![Amazon S3](https://img.shields.io/badge/Amazon%20S3-569A31?logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
-[![AWS Route53](https://img.shields.io/badge/AWS%20Route53-8C4FFF?logo=amazonroute53&logoColor=white)](https://aws.amazon.com/route53/)
 [![AWS IAM](https://img.shields.io/badge/AWS%20IAM-DD344C?logo=amazoniam&logoColor=white)](https://aws.amazon.com/iam/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=white)](https://postcss.io/)
