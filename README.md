@@ -1,4 +1,4 @@
-# Serverless Portfolio Website
+# Serverless Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
@@ -11,3 +11,46 @@
 [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A?logo=postcss&logoColor=white)](https://postcss.io/)
 [![Prettier](https://img.shields.io/badge/Prettier-darkblue?logo=prettier)](https://prettier.io/)
 [![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint)](https://eslint.org/)
+
+## About
+
+This project is a portfolio website created using [Next.js](https://nextjs.org/). Its main purpose is to showcase my skills and projects, as if it were a resume. It uses Terraform to setup AWS resources (ACM, CloudFront, IAM, S3).
+
+The DNS Hosting and the domain registration are done elsewhere due to AWS costs, but these two could easily be done exclusively using AWS Route 53. This means that the infrastructure is _not_ fully managed by Terraform, and there are some manual steps to be done.
+
+You can find the website at [guilhermecaz.site](https://guilhermecaz.site).
+
+## Usage
+
+If you'd like to build a website based on this project, you can clone the repository, modify the Next.js files, build the project, and use terraform to deploy it to AWS.
+
+### Clone the repository
+
+```bash
+git clone https://github.com/guilhermecaz/serverless_portfolio.git
+```
+
+### Install dependencies
+
+```bash
+cd serverless_portfolio
+npm install
+```
+
+### Modify the files according to your needs
+
+```bash
+cd src/app
+```
+
+### Build the project
+
+```bash
+npm run build
+```
+
+### Deploy the project
+
+```bash
+terraform apply
+```
