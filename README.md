@@ -52,5 +52,9 @@ npm run build
 ### Deploy the project
 
 ```bash
+cd terraform
+terraform init
 terraform apply
 ```
+
+Terraform will then output the CloudFront domain and ACM validation records. These should be used on the domain registrar / DNS provider.
