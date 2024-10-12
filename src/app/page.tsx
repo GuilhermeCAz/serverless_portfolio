@@ -2,8 +2,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <main className="flex flex-grow animate-fadeIn justify-center">
-      <div className="flex flex-col items-center p-6 md:flex-row md:space-x-12 xl:space-x-28 2xl:space-x-40">
+    <div className="flex h-full flex-col items-center justify-center p-6 md:flex-row md:space-x-12 xl:space-x-28 2xl:space-x-40">
         <Image
           src="/images/profile.jpg"
           alt="Profile Picture"
@@ -21,6 +20,5 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-    </main>
   );
 }

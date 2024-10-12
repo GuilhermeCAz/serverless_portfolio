@@ -30,6 +30,7 @@ body {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
