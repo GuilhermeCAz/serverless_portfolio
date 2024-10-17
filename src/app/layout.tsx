@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex h-screen flex-col">
         <Header />
-        <main className="flex-grow snap-y snap-mandatory overflow-y-auto overflow-x-hidden px-8 md:px-16 lg:px-32 2xl:px-96">
+        <main className="flex-grow snap-y snap-mandatory overflow-y-auto overflow-x-hidden">
           {children}
         </main>
         <Footer />
