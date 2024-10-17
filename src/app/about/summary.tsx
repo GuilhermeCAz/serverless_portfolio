@@ -3,12 +3,12 @@ export default function Summary() {
   return (
     <section id="about" className="min-h-full snap-start">
       <Link href="#summary">
-        <h1 className="mb-8 pt-4 text-left text-6xl font-bold hover:text-gray-500">
+        <h1 className="mb-8 pt-4 text-left text-6xl font-bold hover:text-gray-500 2xl:text-7xl">
           Resumo
         </h1>
       </Link>
 
-      <div className="text-justify text-2xl leading-relaxed">
+      <div className="text-justify text-2xl leading-relaxed 2xl:text-3xl">
         <p className="mb-4">
           Engenheiro de Backend com sólida experiência no desenvolvimento e
           otimização de soluções orientadas a dados no setor financeiro.
@@ -20,10 +20,10 @@ export default function Summary() {
           desenvolvimento backend e engenharia de dados.
         </p>
         <p>
-          I am passionate about creating clean, efficient code and enjoy working
-          on both personal and professional projects. My journey as a developer
-          has taken me through various courses, certifications, and experiences
-          that shaped my skills and approach to development.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, facere
+          voluptates qui, rem numquam aliquid maiores dolor sed doloremque
+          necessitatibus aspernatur repellat voluptatem harum voluptatibus
+          dolorum, nesciunt expedita doloribus omnis.
         </p>
       </div>
     </section>

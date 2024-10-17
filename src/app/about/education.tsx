@@ -7,7 +7,7 @@ export default function Education() {
   return (
     <section id="education" className="min-h-full snap-start">
       <Link href="#education">
-        <h1 className="mb-8 pt-4 text-left text-6xl font-bold hover:text-gray-500">
+        <h1 className="mb-8 pt-4 text-left text-6xl font-bold hover:text-gray-500 2xl:text-7xl">
           Formação
         </h1>
       </Link>
