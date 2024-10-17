@@ -6,7 +6,7 @@ resource "aws_s3_bucket_ownership_controls" "portfolio_site" {
   bucket = aws_s3_bucket.portfolio_site.id
 
   rule {
-    object_ownership = "BucketOwnerEnforced"
+    object_ownership = "BucketOwnerPreferred"
   }
 }
 
