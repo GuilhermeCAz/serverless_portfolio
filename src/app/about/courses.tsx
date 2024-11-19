@@ -5,7 +5,7 @@ export default function ResumePage() {
   return (
     <section id="courses" className="min-h-full snap-start">
       <Link href="#courses">
-        <h1 className="mb-8 pt-4 text-left text-6xl font-bold hover:text-gray-500 2xl:text-7xl">
+        <h1 className="mb-8 pt-4 text-left text-6xl font-bold hover:text-gray-500 2xl:pt-16 2xl:text-7xl">
           Formação Complementar
         </h1>
       </Link>
