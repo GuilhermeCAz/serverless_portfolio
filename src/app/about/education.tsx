@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Carousel from '@/app/components/carousel';
 import universityLogo from '@public/images/university-logo.png';
 
 export default function Education() {
@@ -12,32 +11,35 @@ export default function Education() {
         </h1>
       </Link>
 
-      <div className="flex flex-col rounded-lg border border-gray-500 md:flex-row">
-        <Link href="http://www.uerj.br" target="_blank">
+      <div className="flex flex-col items-center text-center md:flex-row md:items-stretch md:text-left">
+        <Link
+          href="http://www.uerj.br"
+          target="_blank"
+          className="mb-4 md:mb-0 md:mr-6 md:w-1/3"
+        >
           <Image
             src={universityLogo}
             alt="UERJ Logo"
-            className="aspect-square cursor-pointer rounded-t-lg bg-amber-100 object-contain opacity-90 md:rounded-s-lg"
+            className="aspect-square rounded-lg bg-gray-900 object-contain hover:opacity-75"
           />
         </Link>
 
-        <div className="flex w-full cursor-grab select-none p-10 text-center active:cursor-grabbing md:text-nowrap">
-          <Carousel
-            slides={[
-              <p key="slide-1" className="text-md md:text-4xl">
-                🎓 Bacharelado em Engenharia de Produção
-              </p>,
-              <p key="slide-2" className="text-md md:text-4xl">
-                📅 Agosto de 2015 &ndash; Dezembro de 2021
-              </p>,
-              <p key="slide-3" className="text-md md:text-4xl">
-                🏛️ Universidade do Estado do Rio de Janeiro | UERJ
-              </p>,
-              <p key="slide-4" className="text-md md:text-4xl">
-                📊 Coeficiente de Rendimento: 8.6 / 10, <i>cum laude</i>
-              </p>,
-            ]}
-          />
+        <div className="flex flex-1 flex-col">
+          <h2 className="text-4xl font-bold text-white 2xl:text-5xl">
+            Bacharelado em Engenharia de Produção
+          </h2>
+
+          <p className="text-md font-medium text-gray-400 md:text-xl">
+            ago/2015 &ndash; dez/2021
+          </p>
+
+          <div className="mt-4 flex flex-grow flex-col justify-center gap-6 text-xl text-gray-300 md:mt-0 md:text-3xl 2xl:text-4xl">
+            <p>
+              📊 Coeficiente de Rendimento: 8.6 / 10, <i>cum laude</i>
+            </p>
+
+            <p>🏛️ Universidade do Estado do Rio de Janeiro (UERJ)</p>
+          </div>
         </div>
       </div>
     </section>
