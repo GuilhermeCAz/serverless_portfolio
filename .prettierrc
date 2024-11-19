@@ -1,11 +1,6 @@
 {
   "endOfLine": "auto",
   "singleQuote": true,
-  "overrides": [
-    {
-      "files": "*.md",
-      "options": { "printWidth": 100 }
-    }
-  ],
+  "overrides": [{ "files": "*.md", "options": { "printWidth": 100 } }],
   "plugins": ["prettier-plugin-tailwindcss"]
 }
