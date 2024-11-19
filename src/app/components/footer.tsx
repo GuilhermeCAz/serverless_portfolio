@@ -5,6 +5,7 @@ import {
   SiWhatsapp,
   SiRoadmapdotsh,
 } from 'react-icons/si';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -49,7 +50,24 @@ export default function Footer() {
         </div>
         <div className="p-4 text-center md:p-0 md:text-right">
           <p>&copy; {new Date().getFullYear()} Guilherme Azevedo</p>
-          <p>Built with Next.js and Tailwind CSS</p>
+          <p>
+            Desenvolvido com{' '}
+            <Link
+              href="https://nextjs.org"
+              target="_blank"
+              className="font-semibold text-gray-200 hover:text-gray-500"
+            >
+              Next.js
+            </Link>{' '}
+            e{' '}
+            <Link
+              href="https://tailwindcss.com"
+              target="_blank"
+              className="font-semibold text-gray-200 hover:text-gray-500"
+            >
+              Tailwind CSS
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
