@@ -8,7 +8,7 @@ export default function HomePage() {
         src={profilePicture}
         alt="Profile Picture"
         priority
-        className="pointer-events-none w-40 overflow-hidden rounded-full grayscale xl:w-64 2xl:w-80"
+        className="pointer-events-none w-40 overflow-hidden rounded-full xl:w-64 2xl:w-80"
       />
       <div className="animate-slideIn p-4 text-center md:p-0">
         <h1 className="mb-4 whitespace-nowrap text-5xl lg:text-7xl 2xl:text-8xl">
